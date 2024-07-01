@@ -1,0 +1,19 @@
+.card-container {
+    max-width: 80rem;
+    min-height: 60rem;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: yellow;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 20%;
+    min-width: 200px;
+    height: 15rem;
+    margin: 5% 5% 5% 5%;
+    background-color: red;
+
+}
