@@ -25,6 +25,9 @@ function Book(title,author,pages, read) {
         }
     }
 
+    this.invertReadStatus = function() {
+        this.read = !this.read;
+    }
 }
 
 //Function to pushing to the library array
@@ -77,14 +80,28 @@ function displayBooks() {
         readStatus.textContent = "Read: " + book.read;
 
         let removeButton = document.createElement("button");
-        removeButton.className = "card-remove-button";
+        removeButton.className = "card-button";
         removeButton.textContent = "Remove";
+        removeButton.onclick = function() {
+            myLibrary.splice(i, 1);
+            displayBooks();
+        };
+
+        let changeReadStatus = document.createElement("button");
+        changeReadStatus.className = "card-button";
+        changeReadStatus.textContent = "Change Read Status";
+        changeReadStatus.onclick = function() {
+            myLibrary[i].invertReadStatus()
+            displayBooks();
+        }
+
 
         newCard.appendChild(bookTitle);
         newCard.appendChild(bookAuthor);
         newCard.appendChild(bookPages);
         newCard.appendChild(readStatus);
         newCard.appendChild(removeButton);
+        newCard.appendChild(changeReadStatus);
 
         cardContainer.appendChild(newCard);
 

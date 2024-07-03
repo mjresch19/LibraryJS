@@ -31,8 +31,9 @@
     font-weight: bold;
 }
 
-.card-remove-button {
-    margin-left: 40%;
+.card-button {
+    margin-bottom: 1vh;
+    margin-left: 30%;
 }
 
 .add-book {

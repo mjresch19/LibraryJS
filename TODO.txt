@@ -4,10 +4,12 @@
 
 ✔ Write function that loops through array and is displays book content in a table
 
-✔  Add NEW BOOK BUTTON
+✔ Add NEW BOOK BUTTON
 
-✔  Create Form for new books
+✔ Create Form for new books
 
-6) Add Remove Book Button on each display and implement functionality
+✔ Add Remove Book Button on each display and implement functionality
 
-7) Add Button to Change Read Status of Book and implement functionality
+✔ Add Button to Change Read Status of Book and implement functionality
+
+✔ Form Validation for Ensuring Page Numbers are Integers
