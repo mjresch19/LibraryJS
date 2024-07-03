@@ -3,8 +3,8 @@
     width: auto;
     min-height: 60rem;
     height: auto;
-    margin-top: 5vh;
-    margin-left: auto;
+    margin-top: 2vh;
+    margin-left: 20vw;
     margin-right: auto;
     display: flex;
     flex-wrap: wrap;
@@ -14,10 +14,10 @@
 }
 
 .card {
-    width: 20%;
+    width: 30%;
     min-width: 200px;
     height: 15rem;
-    margin: 5% 5% 5% 5%;
+    margin: 5% 5% 0 5%;
     background-color: #d3d3d3;
     border-style: solid;
     border-color: black;
@@ -29,4 +29,29 @@
     text-align: center;
     font-size: 16px;
     font-weight: bold;
+}
+
+.card-remove-button {
+    margin-left: 40%;
+}
+
+.add-book {
+    margin-left: 40vw;
+    margin-top: 2vh;
+}
+
+.book-form-hide {
+    margin-left: 40vw;
+    margin-top: 2vh;
+    display: none;
+}
+
+.book-form-show {
+    margin-left: 40vw;
+    margin-top: 2vh;
+    display: block;   
+}
+
+.submit-button {
+    margin-top: 1vh;
 }

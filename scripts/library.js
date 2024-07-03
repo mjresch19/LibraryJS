@@ -1,6 +1,12 @@
+//A library array to hold our books
 const myLibrary = [];
+
+//Card Container
 let cardContainer = document.getElementById("card-container");
-console.log(cardContainer);
+
+//Form Element
+let bookForm = document.getElementById("book-form");
+
 //Constructor for a book
 function Book(title,author,pages, read) {
     this.title = title;
@@ -22,14 +28,33 @@ function Book(title,author,pages, read) {
 }
 
 //Function to pushing to the library array
-function addBookToLibrary(book) {
+function addBookToLibrary() {
+
+    const bookTitle = document.getElementById("title").value;
+    const bookAuthor = document.getElementById("author").value;
+    const bookPages = document.getElementById("pages").value;
+    const statusChecked = bookForm.querySelector('input[name=read]:checked').value;
+
+    let book;
+
+    if (statusChecked === "yes") {
+        book = new Book(bookTitle, bookAuthor, bookPages, true);
+    }
+    else {
+        book = new Book(bookTitle, bookAuthor, bookPages, false);
+    }
+
     myLibrary.push(book);
 }
 
 //Function to display books
 function displayBooks() {
 
-    //for loop that iterates through the obj array
+    //Clear to prevent stacking of duplicates
+    cardContainer.innerHTML = "";
+
+
+    //iterate through the obj array
     myLibrary.forEach((book, i) => {
 
         let newCard = document.createElement("div");
@@ -51,24 +76,36 @@ function displayBooks() {
         readStatus.className = "card-text-content";
         readStatus.textContent = "Read: " + book.read;
 
+        let removeButton = document.createElement("button");
+        removeButton.className = "card-remove-button";
+        removeButton.textContent = "Remove";
+
         newCard.appendChild(bookTitle);
         newCard.appendChild(bookAuthor);
         newCard.appendChild(bookPages);
         newCard.appendChild(readStatus);
+        newCard.appendChild(removeButton);
 
         cardContainer.appendChild(newCard);
 
     });
 }
 
+//function to display the form
+function showForm() {
+    bookForm.className = "book-form-show";
+}
 
 
-let book1 = new Book("Star Wars - Empire Strikes Back", "George Lucas", "400", true);
-let book2 = new Book("Cat in the Hat", "Dr. Seuss", "40", false);
+//function to hide the form
+function hideForm() {
+    bookForm.className = "book-form-hide"
+}
 
-addBookToLibrary(book1);
-addBookToLibrary(book2);
+//event listener to respond to submission of new form
+bookForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    addBookToLibrary();
+    displayBooks();
+})
 
-displayBooks();
-
-console.log(myLibrary);

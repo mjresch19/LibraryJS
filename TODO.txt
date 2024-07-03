@@ -1,13 +1,13 @@
-1) Set up project with skeleton css/hmtl
+✔ Set up project with skeleton css/hmtl
 
-2) Set up skeleton js
+✔ Set up skeleton js
 
-3) Write function that loops through array and is displays book content in a table
+✔ Write function that loops through array and is displays book content in a table
 
-4) Add NEW BOOK BUTTON
+✔  Add NEW BOOK BUTTON
 
-5) Create Form for new books
+✔  Create Form for new books
 
-6) Add Remove Book Button on each display
+6) Add Remove Book Button on each display and implement functionality
 
-7) Add Button to Change Read Status of Book
+7) Add Button to Change Read Status of Book and implement functionality

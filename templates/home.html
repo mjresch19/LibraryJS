@@ -8,8 +8,21 @@
         <script src="../scripts/library.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-        <div class="card-container" id="card-container">
-
-        </div>
+        <button class="add-book" onclick="showForm()">NEW BOOK</button>
+        <form class="book-form-hide" id="book-form">
+            <label for="title">Book Title:</label><br>
+            <input type="text" id="title" name="title" required><br>
+            <label for="author">Author:</label><br>
+            <input type="text" id="author" name="author" required><br>
+            <label for="pages">Pages:</label><br>
+            <input type="text" id="pages" name="pages" required><br>
+            <p>Have you read this book?</p>
+            <input type="radio" id="yes-read" name="read" value="yes" checked required>
+            <label for="yes-read">Yes</label>
+            <input type="radio" id="no-read" name="read" value="no">
+            <label for="no-read">No</label><br>
+            <input type="submit" class="submit-button" value="Submit">
+        </form>
+        <div class="card-container" id="card-container"></div>
     </body>
 </html>
